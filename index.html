@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NOUN STUDENT PORTAL – Nnah Mbere-Abasi Cletus</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body { background: #f8f8fc; font-family: 'Segoe UI', Arial, sans-serif; margin: 0; color: #222; }
+        .header {
+            background: #126935;
+            color: #fff;
+            padding: 20px 0 18px 0;
+            text-align: center;
+            position: relative;
+            border-bottom: 5px solid #e2e2e2;
+        }
+        .noun-logo { width: 60px; position: absolute; left: 32px; top: 26px; border-radius: 10px;}
+        .passport { width: 110px; height: 135px; object-fit: cover; border-radius: 12px; box-shadow: 0 3px 16px #0001; position: absolute; right: 40px; top: 20px; border: 2px solid #e0e0e0; background: #fff;}
+        .tabs { display: flex; flex-wrap: wrap; justify-content: center; background: #fff; box-shadow: 0 2px 7px #0001; border-radius: 0 0 14px 14px; margin-top: -18px;}
+        .tab-btn {
+            padding: 12px 18px; background: #f7f7f7; border: none; cursor: pointer; font-size: 16px;
+            margin: 4px 8px; border-radius: 8px 8px 0 0; color: #222;
+            transition: background 0.2s;
+        }
+        .tab-btn.active, .tab-btn:hover { background: #b6e2c1; color: #126935; font-weight: bold;}
+        .tab-content { display: none; max-width: 880px; margin: 0 auto; background: #fff; border-radius: 12px; box-shadow: 0 5px 20px #0002; padding: 30px 28px 22px 28px; margin-top: 25px;}
+        .tab-content.active { display: block; animation: fadeIn 0.5s; }
+        @keyframes fadeIn { from {opacity: 0;} to {opacity: 1;} }
+        h2 { color: #126935; margin-bottom: 14px;}
+        .section { margin-bottom: 18px;}
+        .label { color: #126935; font-weight: bold; }
+        ul, .tab-content p { line-height: 1.7; }
+        .important { color: #bc0707; font-weight: bold;}
+        .good { color: #17790d; font-weight: bold;}
+        .note { background: #f2fff3; border-left: 6px solid #2ed860; padding: 10px 14px; border-radius: 7px; color: #137025; }
+        .results-table { width: 100%; border-collapse: collapse; background: #fff; margin-bottom: 18px;}
+        .results-table th, .results-table td { padding: 7px 11px; border-bottom: 1px solid #e3e3e3; text-align: left;}
+        .results-table th { background: #e6f5e6; color: #126935;}
+        .results-table td.good { color: #17890d;}
+        @media (max-width: 980px) {
+            .tab-content, .tabs { max-width: 97vw; }
+            .noun-logo { display: none; }
+            .passport { position: static; display: block; margin: 16px auto 0 auto;}
+        }
+        @media (max-width: 700px) {
+            .tab-content { padding: 16px 5vw; }
+            .header { font-size: 15px;}
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="Noun Logo-1.png" alt="NOUN Logo" class="noun-logo">
+        <h1>NOUN STUDENT PORTAL – DASHBOARD</h1>
+        <p style="margin-top:2px;margin-bottom:0;">National Open University of Nigeria</p>
+        <div style="margin: 10px 0 0 0;">
+            <span class="label">Logged in as:</span> Nnah Mbere-Abasi Cletus
+            <span style="margin-left:24px;" class="label">Matric Number:</span> NOU249519824
+            <span style="margin-left:24px;" class="label">Programme:</span> B.Sc. Entrepreneurship, Abuja Study Centre
+        </div>
+        <img src="Mbere-Abasi passport.JPG" alt="Passport" class="passport">
+    </div>
+    <div class="tabs" id="tab-buttons">
+        <button class="tab-btn active" onclick="showTab(0)">Profile & Bank Details</button>
+        <button class="tab-btn" onclick="showTab(1)">Academic Results</button>
+        <button class="tab-btn" onclick="showTab(2)">Financial Clearance</button>
+        <button class="tab-btn" onclick="showTab(3)">JAMB Regularization</button>
+        <button class="tab-btn" onclick="showTab(4)">Practicals & Accommodation</button>
+        <button class="tab-btn" onclick="showTab(5)">Laptop Requirements</button>
+        <button class="tab-btn" onclick="showTab(6)">Messages & Alerts</button>
+    </div>
+
+    <div class="tab-content active">
+        <h2>PROFILE & BANK DETAILS</h2>
+        <ul>
+            <li><b>Name:</b> Nnah Mbere-abasi Cletus</li>
+            <li><b>Matric Number:</b> NOU249519824</li>
+            <li><b>Programme:</b> BSc. Entrepreneurship</li>
+            <li><b>Study Centre:</b> Abuja (Dutse-Alhaji)</li>
+            <li><b>Session:</b> 2024/2025</li>
+            <li><b>Registered Bank:</b> Zenith Bank International</li>
+            <li><b>Account Number:</b> 2083461549</li>
+            <li><b>Account Name:</b> Nnah Mbere-abasi Cletus</li>
+        </ul>
+    </div>
+
+    <div class="tab-content">
+        <h2>ACADEMIC RESULTS</h2>
+        <p><b>100 Level First Semester:</b> All courses PASSED</p>
+        <table class="results-table">
+            <tr>
+                <th>Course Code</th>
+                <th>Course Title</th>
+                <th>Score</th>
+                <th>Grade</th>
+                <th>Status</th>
+            </tr>
+            <tr><td>GST101</td><td>Use of English & Communication Skills I</td><td>78</td><td>A</td><td class="good">Passed</td></tr>
+            <tr><td>GST107</td><td>The Good Study Guide</td><td>82</td><td>A</td><td class="good">Passed</td></tr>
+            <tr><td>GST105</td><td>History & Philosophy of Science</td><td>74</td><td>A</td><td class="good">Passed</td></tr>
+            <tr><td>ENT101</td><td>Introduction to Entrepreneurship</td><td>80</td><td>A</td><td class="good">Passed</td></tr>
+            <tr><td>BUS105</td><td>Elements of Management</td><td>68</td><td>B</td><td class="good">Passed</td></tr>
+            <tr><td>MTH105</td><td>Mathematics for Management Sciences</td><td>61</td><td>B</td><td class="good">Passed</td></tr>
+            <tr><td>ECO121</td><td>Principles of Economics I</td><td>72</td><td>A</td><td class="good">Passed</td></tr>
+        </table>
+        <p><b>100 Level Second Semester:</b> Results awaiting, exams ongoing/just concluded</p>
+    </div>
+
+    <div class="tab-content">
+        <h2>FINANCIAL CLEARANCE</h2>
+        <ul>
+            <li><b>100 Level 1st Semester:</b> Cleared</li>
+            <li><b>100 Level 2nd Semester:</b> Cleared</li>
+            <li><b>Outstanding Fees:</b> None</li>
+            <li><b>Status:</b> Not owing any fees</li>
+        </ul>
+    </div>
+
+    <div class="tab-content">
+        <h2>JAMB REGULARIZATION</h2>
+        <div class="important">
+            ⚠️ ACTION REQUIRED:<br>
+            Pay ₦38,000 for JAMB Regularization NOW to enable NYSC Service after graduation.<br>
+            JAMB Regularization for your set expires after 100L 2nd semester exams.<br>
+            <br>
+            <span style="color:#444; font-weight:normal;">
+            <b>Note:</b> Fee is high as you were admitted without JAMB, so NOUN provides an alternative direct processing route for you.
+            </span>
+        </div>
+    </div>
+
+    <div class="tab-content">
+        <h2>PRACTICALS & ACCOMMODATION</h2>
+        <div class="section">
+            <b>Entrepreneurship Department Practical Program:</b><br>
+            Begins: Within 2 weeks<br>
+            Duration: Until start of 2025/2026 session<br>
+            Centre: Abuja Centre FULL; choose from available states (Uyo, Azare, Benin, Awgu, Kano, Osogbo, Abeokuta, etc.)<br>
+        </div>
+        <div class="section">
+            <b>Accommodation:</b><br>
+            Minimum ₦600,000 required for house/accommodation and personal logistics in chosen state.<br>
+            All practical expenses (house, transport, living costs) are your individual responsibility.<br>
+            Requirement: Must present proof of accommodation before practical approval.<br>
+        </div>
+        <div class="section">
+            <b>NOUN-Supervised Project:</b><br>
+            Continue investment and documentation of your firm (Mbere and Renkre Prime Ventures and Global Services LLP), supervised as part of your coursework.
+        </div>
+    </div>
+
+    <div class="tab-content">
+        <h2>LAPTOP REQUIREMENTS</h2>
+        <div class="section">
+            <b>Inspection:</b><br>
+            You MUST own a laptop before practical/project commencement.
+        </div>
+        <div class="section">
+            <b>Required Features:</b>
+            <ul>
+                <li>Latest-generation processor (e.g., Intel Core i5/i7 13th Gen or AMD Ryzen 5/7 7000 series or Apple M3 chip)</li>
+                <li>Minimum 16GB RAM</li>
+                <li>512GB SSD</li>
+                <li>Full HD display</li>
+                <li>Long battery life (8+ hours)</li>
+                <li>Webcam, microphone, and WiFi 6</li>
+                <li>Latest Windows 11, MacOS, or Ubuntu OS</li>
+                <li>USB-C, HDMI ports</li>
+                <li>Genuine security software</li>
+            </ul>
+            Laptop will be inspected by the school for approval before practical/project can start.
+        </div>
+    </div>
+
+    <div class="tab-content">
+        <h2>MESSAGES & ALERTS</h2>
+        <ul>
+            <li>You are fully cleared for 100L.</li>
+            <li><span class="important">Urgent:</span> Practical placement and accommodation must be completed ASAP (centres filling up quickly, some already full).</li>
+            <li>All school fees/payments now done ONLY through your registered bank to your NOUN e-wallet.</li>
+            <li>Your current e-wallet balance: ₦9,500</li>
+        </ul>
+        <div class="note" style="margin-top:16px;">
+            <b>NOTE:</b> This dashboard is a simulation based on your records, receipts, and photos provided.<br>
+            You may proceed with urgent next steps, including practical placement, accommodation arrangement, laptop procurement, and JAMB regularization payment.
+        </div>
+    </div>
+
+    <script>
+        function showTab(idx) {
+            var tabs = document.querySelectorAll('.tab-btn');
+            var contents = document.querySelectorAll('.tab-content');
+            tabs.forEach((tab, i) => {
+                tab.classList.toggle('active', i === idx);
+                contents[i].classList.toggle('active', i === idx);
+            });
+        }
+    </script>
+</body>
+</html>
